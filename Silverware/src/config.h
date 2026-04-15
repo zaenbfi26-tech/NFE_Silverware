@@ -10,11 +10,11 @@
 // *************uncomment BWHOOP define for bwhoop, bwhoop pro, E011C Santa Edition, and Beta FPV Lite Flight Controllers
 // *************uncomment E011 define for E011 flight Controller
 // *************uncomment H8mini_blue_board for the H8 mini flight controller with blue circuit board
-//#define BWHOOP
+#define BWHOOP
 //#define E011
 //#define H8mini_blue_board
 //#define Silverlite_Brushless
-#define Alienwhoop_ZERO  
+//#define Alienwhoop_ZERO  
 
 
 
@@ -75,25 +75,25 @@
 
 // *************Radio protocol selection
 // *************select only one
-#define RX_SBUS
+//#define RX_SBUS
 //#define RX_CRSF                                           //Requires tbs firmware v2.88 or newer for failsafe to operate properly
 //#define RX_DSMX_2048
 //#define RX_DSM2_1024
 //#define RX_IBUS
 //#define RX_NRF24_BAYANG_TELEMETRY
 //#define RX_BAYANG_BLE_APP
-//#define RX_BAYANG_PROTOCOL_TELEMETRY_AUTOBIND
+#define RX_BAYANG_PROTOCOL_TELEMETRY_AUTOBIND
 
 // *************Transmitter Type Selection
-//#define USE_STOCK_TX
+#define USE_STOCK_TX
 //#define USE_DEVO
-#define USE_MULTI
+//#define USE_MULTI
 
 // *******************************SWITCH SELECTION*****************************
 // *************CHAN_ON - on always ( all protocols)
 // *************CHAN_OFF - off always ( all protocols)
 // *************Aux channels are selectable as CHAN_5 through CHAN_12 for DEVO and through CHAN_13 (but no CHAN_11) for MULTIMODULE users
-// *************Toy transmitter mapping is CHAN_5 (rates button), CHAN_6 (stick gestures RRD/LLD), 
+//*************Toy transmitter mapping is CHAN_5 (rates button), CHAN_6 (stick gestures RRD/LLD), 
 //**************CHAN_7 (headfree button), CHAN_8 (roll trim buttons), CHAN_9 (pitch trim buttons)
 
 //*************Arm switch and Idle Up switch (idle up will behave like betaflight airmode)
@@ -106,11 +106,11 @@
 #define ARMING CHAN_5
 #define IDLE_UP CHAN_5
 #define LEVELMODE CHAN_6
-#define RACEMODE  CHAN_7
-#define HORIZON   CHAN_8
-#define PIDPROFILE CHAN_9                //For switching stickAccelerator & stickTransition profiles on pid.c page
+#define RACEMODE  CHAN_OFF
+#define HORIZON   CHAN_OFF
+#define PIDPROFILE CHAN_OFF                //For switching stickAccelerator & stickTransition profiles on pid.c page
 #define RATES CHAN_ON
-#define LEDS_ON CHAN_10
+#define LEDS_ON CHAN_ON
 
 // *************switch for fpv / other, requires fet
 // *************comment out to disable
@@ -126,7 +126,7 @@
 //#define AUX1_START_ON
 
 // *************automatically remove center bias in toy tx ( needs throttle off for 1 second )
-//#define STOCK_TX_AUTOCENTER
+#define STOCK_TX_AUTOCENTER
 
 
 
@@ -204,14 +204,14 @@
 
 //#define WEAK_FILTERING
 //#define STRONG_FILTERING
-//#define VERY_STRONG_FILTERING
+#define VERY_STRONG_FILTERING
 //#define ALIENWHOOP_ZERO_FILTERING
-#define BETA_FILTERING
+//#define BETA_FILTERING
 
-#ifdef BETA_FILTERING  //*** ABOVE 100 ADJUST IN INCRIMENTS OF 20, BELOW 100 ADJUST IN INCRIMENTS OF 10, nothing coded beyond 500hz
+//#ifdef BETA_FILTERING  //*** ABOVE 100 ADJUST IN INCRIMENTS OF 20, BELOW 100 ADJUST IN INCRIMENTS OF 10, nothing coded beyond 500hz
 
-//Select Gyro Filter Type *** Select Only One type
-#define KALMAN_GYRO
+Select Gyro Filter Type *** Select Only One type
+//#define KALMAN_GYRO
 //#define PT1_GYRO
 
 //Select Gyro Filter Cut Frequency
@@ -236,12 +236,12 @@
 #define MOTOR_MIN_COMMAND  5.0
 
 // *************invert yaw pid for "PROPS OUT" configuration - This feature is switchable to "PROPS IN" when active with stick gesture DOWN-UP-DOWN, Save selection with DOWN-DOWN-DOWN
-#define INVERT_YAW_PID
+//#define INVERT_YAW_PID
 
 // *************pwm frequency for motor control
 // *************a higher frequency makes the motors more linear
 // *************in Hz
-#define PWMFREQ 32000
+//#define PWMFREQ 32000
 
 // *************clip feedforward attempts to resolve issues that occur near full throttle by adding any clipped motor commands to the next loop output
 //#define CLIP_FF
@@ -348,7 +348,7 @@
 
 
 // *************DEFINE FLIGHT CONTROLLER HARDWARE HAS BEEN MODIFIED FOR BRUSHLESS CONVERSION   **WARNING**DO NOT ENABLE DSHOT DMA ESC DRIVER WITH BRUSHED MOTORS ATTACHED**
-//#define BRUSHLESS_CONVERSION
+#define BRUSHLESS_CONVERSION
 
 //enables use of stick accelerator and stick transition for d term lpf 1 & 2
 #define ADVANCED_PID_CONTROLLER
