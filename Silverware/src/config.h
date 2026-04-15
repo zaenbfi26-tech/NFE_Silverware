@@ -382,7 +382,7 @@ Select Gyro Filter Type *** Select Only One type
 //#define RXDEBUG
 
 // debug things ( debug struct and other)
-//#define DEBUG
+//#define DEBUG 
 
 
 
