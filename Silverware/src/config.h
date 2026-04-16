@@ -10,11 +10,11 @@
 // *************uncomment BWHOOP define for bwhoop, bwhoop pro, E011C Santa Edition, and Beta FPV Lite Flight Controllers
 // *************uncomment E011 define for E011 flight Controller
 // *************uncomment H8mini_blue_board for the H8 mini flight controller with blue circuit board
-//#define BWHOOP
+#define BWHOOP
 //#define E011
 //#define H8mini_blue_board
 //#define Silverlite_Brushless
-#define Alienwhoop_ZERO  
+//#define Alienwhoop_ZERO  
 
 
 
@@ -29,8 +29,8 @@
 #ifdef SILVERWARE_RATES
 // *************rate in deg/sec
 // *************for acro mode
-#define MAX_RATE 860.0          //Roll & Pitch axis
-#define MAX_RATEYAW 500.0       //Yaw axis (used in acro and leveling modes)
+#define MAX_RATE 900.0          //Roll & Pitch axis
+#define MAX_RATEYAW 900.0       //Yaw axis (used in acro and leveling modes)
 
 // *************EXPO from 0.00 to 1.00 , 0 = no exp
 // *************positive = less sensitive near center 
@@ -75,19 +75,19 @@
 
 // *************Radio protocol selection
 // *************select only one
-#define RX_SBUS
+//#define RX_SBUS
 //#define RX_CRSF                                           //Requires tbs firmware v2.88 or newer for failsafe to operate properly
 //#define RX_DSMX_2048
 //#define RX_DSM2_1024
 //#define RX_IBUS
 //#define RX_NRF24_BAYANG_TELEMETRY
 //#define RX_BAYANG_BLE_APP
-//#define RX_BAYANG_PROTOCOL_TELEMETRY_AUTOBIND
+#define RX_BAYANG_PROTOCOL_TELEMETRY_AUTOBIND
 
 // *************Transmitter Type Selection
-//#define USE_STOCK_TX
+#define USE_STOCK_TX
 //#define USE_DEVO
-#define USE_MULTI
+//#define USE_MULTI
 
 // *******************************SWITCH SELECTION*****************************
 // *************CHAN_ON - on always ( all protocols)
@@ -106,11 +106,11 @@
 #define ARMING CHAN_5
 #define IDLE_UP CHAN_5
 #define LEVELMODE CHAN_6
-#define RACEMODE  CHAN_7
-#define HORIZON   CHAN_8
-#define PIDPROFILE CHAN_9                //For switching stickAccelerator & stickTransition profiles on pid.c page
+#define RACEMODE  CHAN_OFF
+#define HORIZON   CHAN_OFF
+#define PIDPROFILE CHAN_OFF                //For switching stickAccelerator & stickTransition profiles on pid.c page
 #define RATES CHAN_ON
-#define LEDS_ON CHAN_10
+#define LEDS_ON CHAN_ON
 
 // *************switch for fpv / other, requires fet
 // *************comment out to disable
@@ -126,7 +126,7 @@
 //#define AUX1_START_ON
 
 // *************automatically remove center bias in toy tx ( needs throttle off for 1 second )
-//#define STOCK_TX_AUTOCENTER
+#define STOCK_TX_AUTOCENTER
 
 
 
@@ -348,7 +348,7 @@
 
 
 // *************DEFINE FLIGHT CONTROLLER HARDWARE HAS BEEN MODIFIED FOR BRUSHLESS CONVERSION   **WARNING**DO NOT ENABLE DSHOT DMA ESC DRIVER WITH BRUSHED MOTORS ATTACHED**
-//#define BRUSHLESS_CONVERSION
+#define BRUSHLESS_CONVERSION
 
 //enables use of stick accelerator and stick transition for d term lpf 1 & 2
 #define ADVANCED_PID_CONTROLLER
