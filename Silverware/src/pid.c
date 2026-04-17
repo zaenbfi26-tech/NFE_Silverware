@@ -90,7 +90,7 @@ float stickTransitionProfileB[3]  = { 0.3 , 0.3 , 0.0};           //keep values 
 //float pidkp[PIDNUMBER] = {9.5e-2 , 12.5e-2  , 2.0e-1 }; 
 //float pidki[PIDNUMBER] = { 14.0e-1  , 14.0e-1 , 14.0e-1 };	
 //float pidkd[PIDNUMBER] = { 2.3e-1 , 3.3e-1  , 0.5e-1 };
-PID build 2S :
+
 float pidkp[PIDNUMBER] = {11.2e-2 , 12.6e-2  , 1.8e-1 }; 
 float pidki[PIDNUMBER] = { 14e-1  , 15e-1 , 15e-1 }; 
 float pidkd[PIDNUMBER] = { 5.6e-1 , 6.7e-1  , 0.5e-1 };
